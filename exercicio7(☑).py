@@ -3,6 +3,7 @@ corretor = str(input("Digite o nome do corretor: "))
 moveis_vendidos = int(input("Digite o quantidade de imóveis vendidos: "))
 vendas = float(input("Digite o valor de vendas: "))
 
+
 #o valor base do salário dos funcionários
 salario = 2500
 #comissão dos imoveis

@@ -1,15 +1,15 @@
-#importar a raiz quadradad para o seu valor ser usado sladskd
-from math import sqrt
+#Pedindo o valor das variáveis
+deposito_inicial = float(input("Digite o valor do depósito inicial: "))
+taxa = float(input("Digite o valor da taxa de juros mensal: "))
+valor_inicial = deposito_inicial
 
+#Calculando os juros
+for mes in range(1, 25):
+    juros = deposito_inicial * (taxa / 100)
+    deposito_inicial += juros
+    print(f"Mês {mes}: R$ {deposito_inicial:.2f}")
 
-numero1 = int(input("Digite o primeiro valor positivo: "))
-numero2 = int(input("Digite o segundo valor positivo"))
-
-#o valor ao cubo do segundo numero
-cubo = sqrt (numero1) ** 2
-
-#calculando a média geométrica entre o rpimeiro e segundo número
-media_geometrica = sqrt (numero1 * numero2)
-
-print("a) O cubo do primeiro número: ", cubo)
-print("b) A média geométrica entre o primeiro e o segundo número: ", media_geometrica)
+# Calculando o total de juros
+total_juros = deposito_inicial - valor_inicial
+print(f"Valor total ganho com juros: R$ {total_juros:.2f}")
+print(f"Valor final: R$ {deposito_inicial:.2f}")

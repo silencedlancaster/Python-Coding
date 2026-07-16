@@ -1,9 +1,15 @@
-#pedindo o valor da velocidade em km/s
-velocidade_km = float(input("Digite o valor da velocidade média (km/h): "))
+#pedindo o valor das variáveis da distância a percorrer
+percorrido = float(input("Digite a distância que deseja ir (km): "))
 
-#a conversão de km/s para m/s
-velocidadems = velocidade_km / 3.6
+#condição de preços por kilometro
+if percorrido > 200: 
+    por_km = 0.50
+else:
+    por_km = 0.45
 
-print("A velocidade em m/s: ", f"{velocidadems:.2f}")
+#o calculo do kilometro á percorrer
+total_percorrer = (percorrido * por_km)
 
+#resultado na tela
+print("O valor da corrida: R$", total_percorrer)
 

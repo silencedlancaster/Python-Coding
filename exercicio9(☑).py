@@ -1,21 +1,20 @@
-#Colocando valores para a variável "copo1" e "copo2"
-copo1 = "laranja"
-copo2 = "acerola"
+# Pedindo os valores das variáveis
+deposito_inicial = float(input("Digite o valor do depósito inicial: "))
+taxa = float(input("Digite a taxa de juros mensal (%): "))
+deposito_mensal = float(input("Digite o valor do depósito mensal: "))
 
-#Fazer aparecer uma mensagem mostrando as variáveis antes da troca
-#Mostrando o valor da variável de "copo1" e "copo2" originalmente
-print("Os sucos antes da troca de copos: ")
-print("O suco do primeiro copo: ", copo1)
-print("O suco do segundo copo: ", copo2)
+saldo = deposito_inicial
+total_depositado = deposito_inicial
 
-#O valor da troca vai receber o valor que está em "copo1"
-#O "copo1", que está sem valor, recebera o valor da variável "copo2"
-#A variável "copo2", que está sem valor, vai receber o valor da variável troca
-troca = copo1
-copo1 = copo2
-copo2 = troca
+#calculo dos 24 meses, caluclo de juros e o depósito
+for mes in range(1, 25):
+    saldo += deposito_mensal        
+    total_depositado += deposito_mensal
+    juros = saldo * (taxa / 100)    
+    saldo += juros
+    print(f"Mês {mes}: R$ {saldo:.2f}")
 
-#Aparecerá uma mensagem na tela mostrando o valor atual da variáveis depois da troca
-print("Os sucos depois da troca: ")
-print("O suco do primeiro copo: ", copo1)
-print("O suco do segundo copo: ", copo2)
+total_juros = saldo - total_depositado
+
+print(f"Valor total ganho com juros: R$ {total_juros:.2f}")
+print(f"Valor total acumulado: R$ {saldo:.2f}")

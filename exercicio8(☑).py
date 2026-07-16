@@ -1,6 +1,7 @@
 #importar a raiz quadradad para o seu valor ser usado sladskd
 from math import sqrt
 
+
 numero1 = int(input("Digite o primeiro valor positivo: "))
 numero2 = int(input("Digite o segundo valor positivo"))
 

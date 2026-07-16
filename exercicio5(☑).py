@@ -1,17 +1,17 @@
-#pedindo o valor das variáveis do emprestimo
-valor_casa = float(input("Digite o valor da casa desejada: R$"))
-salario = float(input("Digite o valor do seu salário: R$"))
-anos = int(input("Digite a quantidade de anos á pagar pela casa: "))
+#importando o valor da raiz quadrada para ser possivel usar o seu valor
+from math import sqrt
 
-#conversão de anos para meses
-meses = (anos * 12)
-#calculando a prestação da casa
-prestacao = valor_casa / meses
-#calculando o limite da prestação
-maximo = salario * 0.30
+#os valores do primeiro ponto
+x1 = float(input("Digite o valor de x1: "))
+y1 = float(input("Digite o valor de y1: "))
 
-#verificando se a prestação é menor que os 30%
-if prestacao <= maximo:
-    print("Emprestimo aprovado.")
-else:
-    print("Emprestimo negado.")
+#os valores do segundo ponto
+
+x2 = float(input("Digite o valor de x2: "))
+y2 = float(input("Digite o valor de y2: "))
+
+#calculando a distância
+distancia = sqrt ((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+#mostrando o resultado na tela
+print("O valor da distância entre esses pontos: ", f"{distancia:.2f}")
